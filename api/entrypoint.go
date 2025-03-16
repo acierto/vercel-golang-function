@@ -19,11 +19,6 @@ func myRoute(r *gin.RouterGroup) {
 		c.String(http.StatusOK, "Hello from GoLang in Vercel")
 	})
 	r.GET("/employees", func(c *gin.Context) {
-		fmt.Println(os.Environ())
-
-		fmt.Printf("SUPABASE_URL %v", os.Getenv("SUPABASE_URL"))
-		fmt.Printf("SUPABASE_ANON_KEY %v", os.Getenv("SUPABASE_ANON_KEY"))
-
 		client, err := supabase.NewClient(os.Getenv("SUPABASE_URL"), os.Getenv("SUPABASE_ANON_KEY"), &supabase.ClientOptions{})
 		if err != nil {
 			fmt.Println("cannot initialize client", err)
