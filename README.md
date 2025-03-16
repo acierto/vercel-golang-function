@@ -2,4 +2,12 @@
 
 Deploy new version: `pnpm run deploy`
 
-Trigger the endpoint: https://vercel-golang-function-9k6esu8to-bnechyporenkos-projects.vercel.app/api/hello
+# Endpoints 
+
+## Hello endpoint 
+
+https://vercel-golang-function-9k6esu8to-bnechyporenkos-projects.vercel.app/api/hello
+
+## Connection to Supabase
+
+https://vercel-golang-function-9k6esu8to-bnechyporenkos-projects.vercel.app/api/employees
