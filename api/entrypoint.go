@@ -33,13 +33,17 @@ func myRoute(r *gin.RouterGroup) {
 	})
 }
 
-func init() {
+func loadEnvVariables() {
 	if os.Getenv("__VERCEL_DEV_RUNNING") == "1" {
 		err := godotenv.Load("../../../.env.development.local")
 		if err != nil {
 			log.Fatal("Error loading .env file")
 		}
 	}
+}
+
+func init() {
+	loadEnvVariables()
 
 	app = gin.New()
 	r := app.Group("/api")
