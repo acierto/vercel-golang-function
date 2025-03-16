@@ -9,7 +9,9 @@
   "scripts": {
     "deploy": "vercel .",
     "setup": "pnpm vercel login && pnpm vercel link",
-    "start": "pnpm vercel dev",
-    "dev": "pnpm start"
+    "start": "pnpm vercel pull && pnpm vercel dev"
+  },
+  "devDependencies": {
+    "supabase": "^2.19.7"
   }
 }
